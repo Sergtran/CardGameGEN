@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public int cardsToSpawn = 0;
     public CardSpawner cardSpawner;
+    public CardInteractionController cardInteractionController;
+    public LifeController lifeController;
 
 
     private static GameManager instance;
@@ -37,9 +39,13 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
     public void SendCardsToSpawn(int amount)
     {
         cardSpawner.CreateMatrix(amount);
+    }
+    
+    public void OnPairMismatch()
+    {
+        lifeController.DecreaseLife();
     }
 }
