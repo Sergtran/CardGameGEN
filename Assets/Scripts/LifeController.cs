@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LifeController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int inicialLife;
+    public int currentLife;
     void Start()
     {
         
@@ -18,7 +19,11 @@ public class LifeController : MonoBehaviour
 
     public void DecreaseLife()
     {
+        //codigo con logica para perde vida
 
-
+        if (currentLife==0)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }

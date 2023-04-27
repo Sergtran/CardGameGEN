@@ -48,4 +48,9 @@ public class GameManager : MonoBehaviour
     {
         lifeController.DecreaseLife();
     }
+
+    public void GameOver()
+    {
+
+    }
 }

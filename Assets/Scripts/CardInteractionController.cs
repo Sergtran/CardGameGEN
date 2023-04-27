@@ -23,7 +23,7 @@ public class CardInteractionController : MonoBehaviour
         //se necesita un bool si las cartas son paraje true sino false
         if (itIsMatch)
         {
-
+            //desaparecer cartas
         }
         else
         {
