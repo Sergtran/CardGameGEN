@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotarCarta : MonoBehaviour
 {
+    public string myName;
     // Start is called before the first frame update
     private float maxElevacionCarta = .5f;
     private float minElevacionCarta = 0.005f;
@@ -41,11 +42,6 @@ public class RotarCarta : MonoBehaviour
         {
             EsconderCartas();
         }
-
-
-
-
-
     }
 
     private void ElevarCarta()
