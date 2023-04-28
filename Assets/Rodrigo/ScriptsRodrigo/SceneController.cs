@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    /*
+  /*
     public const int gridRows = 2;
     public const int gridCols = 4;
     public const float offsetX = 2f;
@@ -40,7 +40,7 @@ public class SceneController : MonoBehaviour
 
                 int index = j * gridCols + i;
                 int id = numbers[index];
-                card.CambiarSprite(id, images[id]);
+              //  card.CambiarSprite(id, images[id]);
 
                 float posX = (offsetX * i) + startPos.x;
                 float posZ = (offsetZ * j) + startPos.y;
@@ -109,10 +109,10 @@ public class SceneController : MonoBehaviour
         _secondRevealed = null;
 
     }
-    /*
+   
         public void Restart()
         {
             SceneManager.LoadScene("Scene_001");
         }
-    */
+  */
 }

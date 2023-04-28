@@ -34,27 +34,12 @@ public class RotarCarta : MonoBehaviour
 
         if (estaDestapada)
         {
-            InvokeRepeating("ElevarCarta", 0f, .001f);
-            Invoke("DetenerElevacion", .2f);
-
-
-            InvokeRepeating("DestaparCarta", .5f, .001f);
-            Invoke("DetenerDestapado", 1.3f);
-
-            InvokeRepeating("DescenderCarta", 1.2f, .001f);
-            Invoke("DetenerDescenso", 1.4f);
+            DesvelarCarta();
         }
 
         if (estaDestapada == false)
         {
-            InvokeRepeating("ElevarCarta", 0f, .001f);
-            Invoke("DetenerElevacion", .2f);
-
-            InvokeRepeating("TaparCarta", .5f, .001f);
-            Invoke("DetenerTapado", 1.3f);
-
-            InvokeRepeating("DescenderCarta", 1.2f, .001f);
-            Invoke("DetenerDescenso", 1.4f);
+            EsconderCartas();
         }
 
 
@@ -62,6 +47,7 @@ public class RotarCarta : MonoBehaviour
 
 
     }
+
     private void ElevarCarta()
     {
         if (maxElevacionCarta > transform.position.y)
@@ -133,4 +119,42 @@ public class RotarCarta : MonoBehaviour
         rotacionFinalZ = 180;
     }
 
+    /*------------------------------------------------------------------------------------------------*/
+
+    public void DesvelarCarta()
+    {
+        InvokeRepeating("ElevarCarta", 0f, .001f);
+        Invoke("DetenerElevacion", .2f);
+
+
+        InvokeRepeating("DestaparCarta", .5f, .001f);
+        Invoke("DetenerDestapado", 1.3f);
+
+        InvokeRepeating("DescenderCarta", 1.2f, .001f);
+        Invoke("DetenerDescenso", 1.4f);
+    }
+
+    public void EsconderCartas()
+    {
+        InvokeRepeating("ElevarCarta", 0f, .001f);
+        Invoke("DetenerElevacion", .2f);
+
+        InvokeRepeating("TaparCarta", .5f, .001f);
+        Invoke("DetenerTapado", 1.3f);
+
+        InvokeRepeating("DescenderCarta", 1.2f, .001f);
+        Invoke("DetenerDescenso", 1.4f);
+    }
+
+    /*-------------------------------------------------------------------------------*/
+    void InformacionObjeto(GameObject objetoSeleccionado)
+    {
+        // Obtiene el nombre del objeto y lo imprime en la consola
+        string nombre = objetoSeleccionado.name;
+        Debug.Log("El objeto seleccionado es: " + nombre);
+
+        // Obtiene la posición del objeto y lo imprime en la consola
+        Vector3 posicion = objetoSeleccionado.transform.position;
+        Debug.Log("La posición del objeto es: " + posicion);
+    }
 }
