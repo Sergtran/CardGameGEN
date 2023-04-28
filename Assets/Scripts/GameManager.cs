@@ -5,10 +5,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int cardsToSpawn = 0;
+    public int dificulty = 0;
     public CardSpawner cardSpawner;
     public CardInteractionController cardInteractionController;
     public LifeController lifeController;
-
+    private int difficulty;
 
     private static GameManager instance;
     public static GameManager Instance
@@ -31,13 +32,16 @@ public class GameManager : MonoBehaviour
 
     }
     void Start()
-    {
-        
+    {        
+        if (PlayerPrefs.HasKey("Difficulty"))
+        {
+            difficulty = PlayerPrefs.GetInt("Difficulty");
+        }
     }
 
     void Update()
     {
-        
+        Debug.Log(difficulty);
     }
     public void SendCardsToSpawn(int amount)
     {
