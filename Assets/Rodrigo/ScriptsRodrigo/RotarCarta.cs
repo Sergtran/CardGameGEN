@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotarCarta : MonoBehaviour
 {
-    public string myName;
+    [HideInInspector] public string myName;
     // Start is called before the first frame update
     private float maxElevacionCarta = .5f;
     private float minElevacionCarta = 0.005f;
@@ -20,7 +20,7 @@ public class RotarCarta : MonoBehaviour
     // [SerializeField] private SceneController controller;
     void Start()
     {
-
+        myName = this.gameObject.name; 
     }
 
     // Update is called once per frame
@@ -65,7 +65,7 @@ public class RotarCarta : MonoBehaviour
             transform.position += Vector3.down * 1f * Time.deltaTime;
         }
     }
-
+    
     void DetenerDescenso()
     {
         // Detener la repetición de la llamada a MoveObject
@@ -129,7 +129,18 @@ public class RotarCarta : MonoBehaviour
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
     }
+   public void EsconderCartas()
+    {
+        InvokeRepeating("ElevarCarta", 0f, .001f);
+        Invoke("DetenerElevacion", .2f);
 
+        InvokeRepeating("TaparCarta", .5f, .001f);
+        Invoke("DetenerTapado", 1.3f);
+
+        InvokeRepeating("DescenderCarta", 1.2f, .001f);
+        Invoke("DetenerDescenso", 1.4f);
+    }
+/*
     public void EsconderCartas()
     {
         InvokeRepeating("ElevarCarta", 0f, .001f);
@@ -141,7 +152,7 @@ public class RotarCarta : MonoBehaviour
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
     }
-
+*/
     /*-------------------------------------------------------------------------------*/
     void InformacionObjeto(GameObject objetoSeleccionado)
     {
@@ -152,5 +163,17 @@ public class RotarCarta : MonoBehaviour
         // Obtiene la posición del objeto y lo imprime en la consola
         Vector3 posicion = objetoSeleccionado.transform.position;
         Debug.Log("La posición del objeto es: " + posicion);
+    }
+
+     private int _id;
+    public int id
+    {
+        get { return _id; }
+    }
+
+    public void ChangeSprite(int id, Material image)
+    {
+        _id = id;
+        GetComponent<Renderer>().material = image; //This gets the sprite renderer component and changes the property of it's sprite!
     }
 }
