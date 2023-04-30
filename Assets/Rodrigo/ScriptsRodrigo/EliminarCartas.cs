@@ -118,7 +118,7 @@ public class EliminarCartas : MonoBehaviour
         Destroy(currentSelection[1].gameObject);
         var allRotateCards = FindObjectsOfType<RotarCarta>();
         Debug.Log(allRotateCards.Length);
-        if (allRotateCards.Length <2)
+        if (allRotateCards.Length <=2)
         {
             GameManager.Instance.YouWin();
         }
