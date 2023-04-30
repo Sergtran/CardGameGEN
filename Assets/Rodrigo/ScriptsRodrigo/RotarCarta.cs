@@ -29,8 +29,10 @@ public class RotarCarta : MonoBehaviour
 
     }
 
+
     private void OnMouseDown()
     {
+      
         estaDestapada = !estaDestapada;
 
         if (estaDestapada)
@@ -103,7 +105,7 @@ public class RotarCarta : MonoBehaviour
             RotacionAdicionalZ = minRotacionZ + rotacionFinalZ;
         }
         // Rotar el objeto en el eje Z según la rotación adicional
-        transform.Rotate(0f, 0f, RotacionAdicionalZ);
+        transform.Rotate(0f, 0f,RotacionAdicionalZ);
 
         // Actualizar la rotación actual en el eje Z
         rotacionFinalZ = rotacionFinalZ + RotacionAdicionalZ;
@@ -129,6 +131,7 @@ public class RotarCarta : MonoBehaviour
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
     }
+/*
    public void EsconderCartas()
     {
         InvokeRepeating("ElevarCarta", 0f, .001f);
@@ -140,7 +143,8 @@ public class RotarCarta : MonoBehaviour
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
     }
-/*
+    */
+
     public void EsconderCartas()
     {
         InvokeRepeating("ElevarCarta", 0f, .001f);
@@ -152,7 +156,7 @@ public class RotarCarta : MonoBehaviour
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
     }
-*/
+
     /*-------------------------------------------------------------------------------*/
     void InformacionObjeto(GameObject objetoSeleccionado)
     {

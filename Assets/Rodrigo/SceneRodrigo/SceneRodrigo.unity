@@ -403,8 +403,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148447177}
-  m_LocalRotation: {x: -0.001069793, y: 0.9342984, z: -0.35647947, w: -0.0028038195}
-  m_LocalPosition: {x: 4.95613, y: 4.711447, z: 6.116102}
+  m_LocalRotation: {x: -0.0021138848, y: 0.88279426, z: -0.46973827, w: -0.0039725937}
+  m_LocalPosition: {x: 4.418652, y: 7.0803294, z: 5.552825}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 1933102085}
   - component: {fileID: 1933102084}
   - component: {fileID: 1933102088}
+  - component: {fileID: 1933102089}
   m_Layer: 0
   m_Name: Mesa
   m_TagString: Untagged
@@ -546,8 +547,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933102083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.87, y: -0.09300041, z: 0.93}
-  m_LocalScale: {x: 10.865639, y: 0.085191846, z: 4.2931476}
+  m_LocalPosition: {x: 4.87, y: -0.2, z: 0.93}
+  m_LocalScale: {x: 20.085133, y: 0.15747713, z: 7.9358835}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,3 +573,24 @@ MonoBehaviour:
   - {fileID: 7980193219995342106, guid: 7b9998affe806ce448eabb1e8e281d5e, type: 3}
   - {fileID: 5015733219474354621, guid: 38a5c942655dba24eb9b1b12458f492a, type: 3}
   - {fileID: 8874977544794859555, guid: 2948729088a704642bc2c873ad7555c0, type: 3}
+  separacion: 1
+--- !u!114 &1933102089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933102083}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a52c59d412371428288a79a1927fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filas: 3
+  columnas: 2
+  objeto: {fileID: 0}
+  listaPrefabs:
+  - {fileID: 7980193219995342106, guid: 7b9998affe806ce448eabb1e8e281d5e, type: 3}
+  - {fileID: 5015733219474354621, guid: 38a5c942655dba24eb9b1b12458f492a, type: 3}
+  - {fileID: 8874977544794859555, guid: 2948729088a704642bc2c873ad7555c0, type: 3}
+  separacion: 0

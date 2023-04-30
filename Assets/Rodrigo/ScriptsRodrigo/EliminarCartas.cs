@@ -46,8 +46,8 @@ public class EliminarCartas : MonoBehaviour
             {
                 // Las dos cartas forman una pareja, ejecutar lógica de juego
                 Debug.Log("son pareja");
-                InvokeRepeating("EliminarCartasPares", 2f, 2f);
-                Invoke("DetenerAccion3", 3f);
+                InvokeRepeating("EliminarCartasPares", 2.5f, 1f); // ESTO FUE MODIFICADOOO!!!!!!!!
+                Invoke("DetenerAccion3", 2.7f);
                 
             }
             else
@@ -57,13 +57,13 @@ public class EliminarCartas : MonoBehaviour
                 // Las dos cartas no forman una pareja, ejecutar lógica de juego
                 if (sonPareja == false)
                 {
-                    InvokeRepeating("OcultarCartas", 2f, 2f);
+                    InvokeRepeating("OcultarCartas", 2f, 2.5f); // ESTO FUE MODIFICADOOO!!!!!!!!
                     Invoke("DetenerAccion", 2.4f);
                 }
 
             }
             // Limpiar la selección actual del usuario
-            InvokeRepeating("EjecutarLimpieza", 3.5f, .001f);
+            InvokeRepeating("EjecutarLimpieza", 3.5f, .001f); // ESTO FUE MODIFICADOOO!!!!!!!!
             Invoke("DetenerAccion2", 3.6f);
         }
     }

@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 8094615304004986466}
   - component: {fileID: 7870760250893596958}
   - component: {fileID: 2017728064662046312}
-  - component: {fileID: 4211639509387423624}
+  - component: {fileID: -6980620590091939812}
   m_Layer: 0
   m_Name: CartaLuna
   m_TagString: Untagged
@@ -196,7 +196,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9721137, z: 1}
   m_Center: {x: 0, y: -0.28351113, z: 0}
---- !u!114 &4211639509387423624
+--- !u!114 &-6980620590091939812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,5 +208,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e836f188137cf194d8b09e323eaee2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Corazon
+  myName: 
   estaDestapada: 0
