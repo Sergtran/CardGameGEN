@@ -30,42 +30,56 @@ public class EliminarCartas : MonoBehaviour
     }
     void SelectCard(RotarCarta selectedCard)
     {
-        if (currentSelection[0] == null)
-        {
-            // Primer carta seleccionada
-            currentSelection[0] = selectedCard;
-        }
-        else if (currentSelection[1] == null)
-        {
-            // Segunda carta seleccionada
-            currentSelection[1] = selectedCard;
+      
 
-            // Comparar las dos cartas seleccionadas
-            bool match = CompareCards(currentSelection[0], currentSelection[1]);
-            if (match)
+
+            if (currentSelection[0] == null)
             {
-                // Las dos cartas forman una pareja, ejecutar lógica de juego
-                Debug.Log("son pareja");
-                InvokeRepeating("EliminarCartasPares", 2.5f, 1f); // ESTO FUE MODIFICADOOO!!!!!!!!
-                Invoke("DetenerAccion3", 2.7f);
-                
+                // Primer carta seleccionada
+                currentSelection[0] = selectedCard;
+                 Debug.Log(currentSelection[0].estaDestapada);
+                 currentSelection[0].DesvelarCarta();
+                 Debug.Log(currentSelection[0].estaDestapada);
             }
-            else
+            else if (currentSelection[1] == null)
             {
-                sonPareja = false;
-                Debug.Log("NO son pareja");
-                // Las dos cartas no forman una pareja, ejecutar lógica de juego
-                if (sonPareja == false)
+                // Segunda carta seleccionada
+                if(selectedCard.estaDestapada == false){
+
+               
+                currentSelection[1] = selectedCard;
+                Debug.Log(currentSelection[1].estaDestapada);
+                selectedCard.DesvelarCarta();
+                Debug.Log(currentSelection[1].estaDestapada);
+
+                // Comparar las dos cartas seleccionadas
+                bool match = CompareCards(currentSelection[0], currentSelection[1]);
+                if (match)
                 {
-                    InvokeRepeating("OcultarCartas", 2f, 2.5f); // ESTO FUE MODIFICADOOO!!!!!!!!
-                    Invoke("DetenerAccion", 2.4f);
-                }
+                    // Las dos cartas forman una pareja, ejecutar lógica de juego
+                    Debug.Log("son pareja");
+                    InvokeRepeating("EliminarCartasPares", 2.5f, 1f); // ESTO FUE MODIFICADOOO!!!!!!!!
+                    Invoke("DetenerAccion3", 2.7f);
 
+                }
+                else
+                {
+                    sonPareja = false;
+                    Debug.Log("NO son pareja");
+                    // Las dos cartas no forman una pareja, ejecutar lógica de juego
+                    if (sonPareja == false)
+                    {
+                        InvokeRepeating("OcultarCartas", 2f, 2.5f); // ESTO FUE MODIFICADOOO!!!!!!!!
+                        Invoke("DetenerAccion", 2.4f);
+                    }
+
+                }
+                // Limpiar la selección actual del usuario
+                InvokeRepeating("EjecutarLimpieza", 3.5f, .001f); // ESTO FUE MODIFICADOOO!!!!!!!!
+                Invoke("DetenerAccion2", 3.6f);
+                 }
             }
-            // Limpiar la selección actual del usuario
-            InvokeRepeating("EjecutarLimpieza", 3.5f, .001f); // ESTO FUE MODIFICADOOO!!!!!!!!
-            Invoke("DetenerAccion2", 3.6f);
-        }
+        
     }
 
     public bool CompareCards(RotarCarta card1, RotarCarta card2)

@@ -29,11 +29,11 @@ public class RotarCarta : MonoBehaviour
 
     }
 
-
+/*
     private void OnMouseDown()
     {
       
-        estaDestapada = !estaDestapada;
+       // estaDestapada = !estaDestapada;
 
         if (estaDestapada)
         {
@@ -45,6 +45,7 @@ public class RotarCarta : MonoBehaviour
             EsconderCartas();
         }
     }
+*/
 
     private void ElevarCarta()
     {
@@ -130,6 +131,7 @@ public class RotarCarta : MonoBehaviour
 
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
+        estaDestapada = true;
     }
 /*
    public void EsconderCartas()
@@ -155,29 +157,7 @@ public class RotarCarta : MonoBehaviour
 
         InvokeRepeating("DescenderCarta", 1.2f, .001f);
         Invoke("DetenerDescenso", 1.4f);
+         estaDestapada = false;
     }
 
-    /*-------------------------------------------------------------------------------*/
-    void InformacionObjeto(GameObject objetoSeleccionado)
-    {
-        // Obtiene el nombre del objeto y lo imprime en la consola
-        string nombre = objetoSeleccionado.name;
-        Debug.Log("El objeto seleccionado es: " + nombre);
-
-        // Obtiene la posición del objeto y lo imprime en la consola
-        Vector3 posicion = objetoSeleccionado.transform.position;
-        Debug.Log("La posición del objeto es: " + posicion);
-    }
-
-     private int _id;
-    public int id
-    {
-        get { return _id; }
-    }
-
-    public void ChangeSprite(int id, Material image)
-    {
-        _id = id;
-        GetComponent<Renderer>().material = image; //This gets the sprite renderer component and changes the property of it's sprite!
-    }
 }
