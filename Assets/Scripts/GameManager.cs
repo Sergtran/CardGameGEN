@@ -38,15 +38,15 @@ public class GameManager : MonoBehaviour
         switch (difficulty)
         {
             case 0:
-                crearCartas.InstanciarCartas(3,2);
+                crearCartas.InstanciarCartas(1,8);
 
                 break;
             case 1:
-                crearCartas.InstanciarCartas(3, 4);
+                crearCartas.InstanciarCartas(2, 8);
 
                 break;
             case 2:
-                crearCartas.InstanciarCartas(3, 6);
+                crearCartas.InstanciarCartas(3, 8);
                 break;
             default:
                 Debug.LogError("Invalid difficulty value!");
