@@ -20,10 +20,10 @@ public class CrearCartas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InstanciarCartas();
+        
     }
 
-    public void InstanciarCartas()
+    public void InstanciarCartas(int filas, int columnas)
     {
         objetos = new GameObject[filas * columnas];
 

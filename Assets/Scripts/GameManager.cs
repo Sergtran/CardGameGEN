@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int cardsToSpawn = 0;
-    public int dificulty = 0;
-    public CardSpawner cardSpawner;
-    public CardInteractionController cardInteractionController;
+    public CrearCartas crearCartas;
+    public EliminarCartas eliminarCartas;
     public LifeController lifeController;
     private int difficulty;
 
@@ -37,16 +35,30 @@ public class GameManager : MonoBehaviour
         {
             difficulty = PlayerPrefs.GetInt("Difficulty");
         }
+        switch (difficulty)
+        {
+            case 0:
+                crearCartas.InstanciarCartas(1,8);
+
+                break;
+            case 1:
+                crearCartas.InstanciarCartas(2, 8);
+
+                break;
+            case 2:
+                crearCartas.InstanciarCartas(3, 8);
+                break;
+            default:
+                Debug.LogError("Invalid difficulty value!");
+                break;
+        }
     }
 
     void Update()
     {
-        Debug.Log(difficulty);
+        
     }
-    public void SendCardsToSpawn(int amount)
-    {
-        cardSpawner.CreateMatrix(amount);
-    }
+  
     
     public void OnPairMismatch()
     {
@@ -55,6 +67,13 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        Debug.Log("you lose");
+        eliminarCartas.gameObject.SetActive(false);
+    }
 
+    public void YouWin()
+    {
+        Debug.Log("you win");
+        eliminarCartas.gameObject.SetActive(false);
     }
 }

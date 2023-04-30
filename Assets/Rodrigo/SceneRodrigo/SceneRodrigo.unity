@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -468,7 +468,6 @@ GameObject:
   - component: {fileID: 1933102085}
   - component: {fileID: 1933102084}
   - component: {fileID: 1933102088}
-  - component: {fileID: 1933102089}
   m_Layer: 0
   m_Name: Mesa
   m_TagString: Untagged
@@ -566,35 +565,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fbd89b0b291cc4c8c80a5876622ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filas: 3
-  columnas: 8
+  filas: 5
+  columnas: 2
   objeto: {fileID: 0}
   listaPrefabs:
-  - {fileID: 7980193219995342106, guid: 7b9998affe806ce448eabb1e8e281d5e, type: 3}
-  - {fileID: 5015733219474354621, guid: 38a5c942655dba24eb9b1b12458f492a, type: 3}
-  - {fileID: 8874977544794859555, guid: 2948729088a704642bc2c873ad7555c0, type: 3}
+  - {fileID: 7311175647998277236, guid: f79479724163d534dae457b749c000e9, type: 3}
+  - {fileID: 7311175647998277236, guid: d240aed765471c74e884bdc1dbe43458, type: 3}
+  - {fileID: 7311175647998277236, guid: ee55a72b45d7d314bbc917b0983192ab, type: 3}
+  - {fileID: 7311175647998277236, guid: de958f93d91a6a441bca88bf57b6a66e, type: 3}
+  - {fileID: 7311175647998277236, guid: b56aa6ff87d1aee4fb850006492f979b, type: 3}
   separacion: 1
   posX: 1
   posY: 1
   sepX: 1
   sepY: 1
---- !u!114 &1933102089
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933102083}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70a52c59d412371428288a79a1927fd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filas: 3
-  columnas: 2
-  objeto: {fileID: 0}
-  listaPrefabs:
-  - {fileID: 7980193219995342106, guid: 7b9998affe806ce448eabb1e8e281d5e, type: 3}
-  - {fileID: 5015733219474354621, guid: 38a5c942655dba24eb9b1b12458f492a, type: 3}
-  - {fileID: 8874977544794859555, guid: 2948729088a704642bc2c873ad7555c0, type: 3}
-  separacion: 0

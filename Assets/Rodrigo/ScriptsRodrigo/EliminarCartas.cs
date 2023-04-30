@@ -7,6 +7,7 @@ public class EliminarCartas : MonoBehaviour
 
     private RotarCarta[] currentSelection = new RotarCarta[2];
     private bool sonPareja = false;
+    private
 
     void Update()
     {
@@ -29,17 +30,14 @@ public class EliminarCartas : MonoBehaviour
         }
     }
     void SelectCard(RotarCarta selectedCard)
-    {
-      
-
-
+    {      
             if (currentSelection[0] == null)
             {
                 // Primer carta seleccionada
                 currentSelection[0] = selectedCard;
-                 Debug.Log(currentSelection[0].estaDestapada);
+                 //Debug.Log(currentSelection[0].estaDestapada);
                  currentSelection[0].DesvelarCarta();
-                 Debug.Log(currentSelection[0].estaDestapada);
+                // Debug.Log(currentSelection[0].estaDestapada);
             }
             else if (currentSelection[1] == null)
             {
@@ -48,24 +46,27 @@ public class EliminarCartas : MonoBehaviour
 
                
                 currentSelection[1] = selectedCard;
-                Debug.Log(currentSelection[1].estaDestapada);
+                //Debug.Log(currentSelection[1].estaDestapada);
                 selectedCard.DesvelarCarta();
-                Debug.Log(currentSelection[1].estaDestapada);
+                //Debug.Log(currentSelection[1].estaDestapada);
 
                 // Comparar las dos cartas seleccionadas
                 bool match = CompareCards(currentSelection[0], currentSelection[1]);
                 if (match)
                 {
                     // Las dos cartas forman una pareja, ejecutar lógica de juego
-                    Debug.Log("son pareja");
+                    //Debug.Log("son pareja");
                     InvokeRepeating("EliminarCartasPares", 2.5f, 1f); // ESTO FUE MODIFICADOOO!!!!!!!!
                     Invoke("DetenerAccion3", 2.7f);
+
+                 
 
                 }
                 else
                 {
                     sonPareja = false;
-                    Debug.Log("NO son pareja");
+                    //Debug.Log("NO son pareja");
+                    GameManager.Instance.OnPairMismatch();
                     // Las dos cartas no forman una pareja, ejecutar lógica de juego
                     if (sonPareja == false)
                     {
@@ -115,6 +116,12 @@ public class EliminarCartas : MonoBehaviour
     {
         Destroy(currentSelection[0].gameObject);
         Destroy(currentSelection[1].gameObject);
+        var allRotateCards = FindObjectsOfType<RotarCarta>();
+        Debug.Log(allRotateCards.Length);
+        if (allRotateCards.Length <2)
+        {
+            GameManager.Instance.YouWin();
+        }
     }
     void DetenerAccion3()
     {
