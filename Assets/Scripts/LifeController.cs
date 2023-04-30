@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class LifeController : MonoBehaviour
     public int currentLife;
     public Image lifeImage;
     public Sprite[] lifeSprites;
+    private bool isMatch;
 
     void Start()
     {
@@ -24,19 +26,20 @@ public class LifeController : MonoBehaviour
 
     public void DecreaseLife()
     {
-        
-    bool isMatch = CompareCards(); // Llamamos a la función que devuelve un bool
-    if (!isMatch) // Si el resultado es falso
-    {
-        currentLife--; // Restamos una vida
-    
-        if (currentLife == 0)
+
+        // bool isMatch = CompareCards(); // Llamamos a la función que devuelve un bool
+        if (!isMatch) // Si el resultado es falso
         {
-            GameManager.Instance.GameOver();
-        }
-        else 
-        {
-            lifeImage.sprite = lifeSprites[currentLife - 1]
+            currentLife--; // Restamos una vida
+
+            if (currentLife == 0)
+            {
+                GameManager.Instance.GameOver();
+            }
+            else
+            {
+                lifeImage.sprite = lifeSprites[currentLife - 1];
+            }
         }
     }
 }
