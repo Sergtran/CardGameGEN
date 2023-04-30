@@ -27,14 +27,15 @@ public class CrearCartas : MonoBehaviour
     {
         objetos = new GameObject[filas * columnas];
 
-        int contadorCartas = 0;
+        int contadorCartas = listaPrefabs.Count -1;
+
         if ((filas * columnas) % 2 == 0)
         {
             for (int i = 0; i < filas * columnas; i++)
             {
                 objetos[i] = listaPrefabs[contadorCartas];
                 contadorCartas++;
-                if (contadorCartas > 2)
+                if (contadorCartas > listaPrefabs.Count - 1)
                 {
                     contadorCartas = 0;
                 }
