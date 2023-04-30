@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         switch (difficulty)
         {
             case 0:
-                crearCartas.InstanciarCartas(1,8);
+                crearCartas.InstanciarCartas(2,8);
 
                 break;
             case 1:
