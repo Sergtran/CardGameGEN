@@ -8,6 +8,7 @@ public class CrearCartas : MonoBehaviour
     public int columnas; // El número de columnas en la matriz
     public GameObject objeto; // El objeto que se instanciará
     public List<GameObject> listaPrefabs; // Los objetos que se instanciarán
+    public List<GameObject> objetosAleatorios;
     private GameObject[] objetos; // El array de objetos que se instanciarán
     public float separacion = 1.2f; // La cantidad de separación entre los objetos
 
@@ -25,27 +26,31 @@ public class CrearCartas : MonoBehaviour
 
     public void InstanciarCartas(int filas, int columnas)
     {
-        objetos = new GameObject[filas * columnas];
+        this.objetosAleatorios.Clear(); // Limpiar la lista de prefabs aleatorios
 
-        int contadorCartas = listaPrefabs.Count -1;
-
+        int contadorCartas = 0;
         if ((filas * columnas) % 2 == 0)
         {
-            for (int i = 0; i < filas * columnas; i++)
+            int numeroAleatorio = Random.Range(0, listaPrefabs.Count);
+
+            if (!this.objetosAleatorios.Contains(listaPrefabs[numeroAleatorio]))
             {
                 objetos[i] = listaPrefabs[contadorCartas];
                 contadorCartas++;
-                if (contadorCartas > listaPrefabs.Count - 1)
+                if (contadorCartas > 2)
                 {
                     contadorCartas = 0;
                 }
             }
         }
 
+        this.objetosAleatorios.AddRange(this.objetosAleatorios);
+
+
         /*---------------------------------------------------------------------------*/
 
         // Barajar la lista de objetos
-        List<GameObject> objetosAleatorios = new List<GameObject>(objetos);
+       
         Shuffle(objetosAleatorios);
 
         // Bucle para recorrer las filas de la matriz
