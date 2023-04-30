@@ -14,33 +14,33 @@ public class LifeController : MonoBehaviour
     void Start()
     {
         currentLife = inicialLife;   
-        lifeImage.sprite = lifeSprites[currentLife - 1];   
+        //lifeImage.sprite = lifeSprites[currentLife - 1];   
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(currentLife);
     }
 
     public void DecreaseLife()
     {
 
         // bool isMatch = CompareCards(); // Llamamos a la función que devuelve un bool
-        if (!isMatch) // Si el resultado es falso
-        {
+         // Si el resultado es falso
+        
             currentLife--; // Restamos una vida
 
-            if (currentLife == 0)
+            if (currentLife < 1)
             {
                 GameManager.Instance.GameOver();
             }
             else
             {
-                lifeImage.sprite = lifeSprites[currentLife - 1];
+                //lifeImage.sprite = lifeSprites[currentLife - 1];
             }
-        }
+        
     }
 }
 
