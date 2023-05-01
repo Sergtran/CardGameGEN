@@ -7,7 +7,6 @@ public class EliminarCartas : MonoBehaviour
 
     private RotarCarta[] currentSelection = new RotarCarta[2];
     private bool sonPareja = false;
-    private
 
     void Update()
     {
@@ -90,11 +89,8 @@ public class EliminarCartas : MonoBehaviour
 
     void OcultarCartas()
     {
-        AudioSource audioSource2 = transform.GetChild(0).GetComponent<AudioSource>();
-        //AudioSource audioSource = GetComponent<AudioSource>();
         currentSelection[0].EsconderCartas();
         currentSelection[1].EsconderCartas();
-        audioSource2.Play();
     }
     void DetenerAccion()
     {
@@ -120,13 +116,13 @@ public class EliminarCartas : MonoBehaviour
         AudioSource audioSource = GetComponent<AudioSource>();
         Destroy(currentSelection[0].gameObject);
         Destroy(currentSelection[1].gameObject);
+        audioSource.Play();
         var allRotateCards = FindObjectsOfType<RotarCarta>();
         Debug.Log(allRotateCards.Length);
         if (allRotateCards.Length <=2)
         {
             GameManager.Instance.YouWin();
         }
-        audioSource.Play();
     }
     void DetenerAccion3()
     {
