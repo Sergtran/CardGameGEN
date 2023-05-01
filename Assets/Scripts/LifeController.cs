@@ -10,11 +10,14 @@ public class LifeController : MonoBehaviour
     public Image lifeImage;
     public Sprite[] lifeSprites;
     private bool isMatch;
+    public AudioSource audioSource;
+
 
     void Start()
     {
-        currentLife = inicialLife;   
+        currentLife = inicialLife;
         //lifeImage.sprite = lifeSprites[currentLife - 1];   
+        audioSource = GameObject.Find("SoundMachete").GetComponent<AudioSource>();
 
     }
 
@@ -24,13 +27,16 @@ public class LifeController : MonoBehaviour
         Debug.Log(currentLife);
     }
 
-    public void DecreaseLife()
+    public IEnumerator DecreaseLife()
     {
 
         // bool isMatch = CompareCards(); // Llamamos a la función que devuelve un bool
-         // Si el resultado es falso
-        
-            currentLife--; // Restamos una vida
+        // Si el resultado es falso
+
+        currentLife--; // Restamos una vida
+
+        yield return new WaitForSeconds(5f);
+        audioSource.Play();
 
             if (currentLife < 1)
             {
@@ -40,8 +46,9 @@ public class LifeController : MonoBehaviour
             {
                 //lifeImage.sprite = lifeSprites[currentLife - 1];
             }
-        
     }
+
+
 }
 
 

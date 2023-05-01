@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public EliminarCartas eliminarCartas;
     public LifeController lifeController;
     private int difficulty;
+    public AudioSource audioSource;
+
 
     private static GameManager instance;
     public static GameManager Instance
@@ -32,7 +34,9 @@ public class GameManager : MonoBehaviour
 
     }
     void Start()
-    {        
+    {
+        audioSource = GameObject.Find("AmbientSound").GetComponent<AudioSource>();
+        
         if (PlayerPrefs.HasKey("Difficulty"))
         {
             difficulty = PlayerPrefs.GetInt("Difficulty");
@@ -64,19 +68,24 @@ public class GameManager : MonoBehaviour
     
     public void OnPairMismatch()
     {
-        lifeController.DecreaseLife();
+        // lifeController.DecreaseLife();
+        StartCoroutine(lifeController.DecreaseLife());
     }
 
     public void GameOver()
     {
+        //AudioSource audioSource2 = transform.GetChild(0).GetComponent<AudioSource>();
+        audioSource.Stop();
         Debug.Log("you lose");
         eliminarCartas.gameObject.SetActive(false);
     }
 
     public void YouWin()
     {
+        audioSource.Stop();
         Debug.Log("you win");
         eliminarCartas.gameObject.SetActive(false);
+
     }
 
     public void BackMenu()
