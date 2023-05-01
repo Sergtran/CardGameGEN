@@ -5,50 +5,43 @@ using UnityEngine.UI;
 
 public class LifeController : MonoBehaviour
 {
-    public int inicialLife = 5;
+    public int initialLife = 5;
     public int currentLife;
     public Image lifeImage;
     public Sprite[] lifeSprites;
-    private bool isMatch;
     public AudioSource audioSource;
 
-
-    void Start()
+    private void Start()
     {
-        currentLife = inicialLife;
-        //lifeImage.sprite = lifeSprites[currentLife - 1];   
-        audioSource = GameObject.Find("SoundMachete").GetComponent<AudioSource>();
+        currentLife = initialLife;
 
-    }
+        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > 0)
+        {
+            lifeImage.sprite = lifeSprites[currentLife - 1];
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(currentLife);
+        audioSource = GameObject.Find("SoundMachete")?.GetComponent<AudioSource>();
     }
 
     public IEnumerator DecreaseLife()
     {
-
-        // bool isMatch = CompareCards(); // Llamamos a la función que devuelve un bool
-        // Si el resultado es falso
-
-        currentLife--; // Restamos una vida
+        currentLife--;
 
         yield return new WaitForSeconds(5f);
-        audioSource.Play();
 
-            if (currentLife < 1)
-            {
-                GameManager.Instance.GameOver();
-            }
-            else
-            {
-                //lifeImage.sprite = lifeSprites[currentLife - 1];
-            }
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+
+        if (currentLife < 1)
+        {
+            GameManager.Instance.GameOver();
+        }
+
+        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > 0)
+        {
+            lifeImage.sprite = lifeSprites[currentLife - 1];
+        }
     }
-
-
 }
-
-
