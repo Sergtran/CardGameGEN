@@ -90,8 +90,11 @@ public class EliminarCartas : MonoBehaviour
 
     void OcultarCartas()
     {
+        AudioSource audioSource2 = transform.GetChild(0).GetComponent<AudioSource>();
+        //AudioSource audioSource = GetComponent<AudioSource>();
         currentSelection[0].EsconderCartas();
         currentSelection[1].EsconderCartas();
+        audioSource2.Play();
     }
     void DetenerAccion()
     {
@@ -114,6 +117,7 @@ public class EliminarCartas : MonoBehaviour
 
     void EliminarCartasPares()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
         Destroy(currentSelection[0].gameObject);
         Destroy(currentSelection[1].gameObject);
         var allRotateCards = FindObjectsOfType<RotarCarta>();
@@ -122,6 +126,7 @@ public class EliminarCartas : MonoBehaviour
         {
             GameManager.Instance.YouWin();
         }
+        audioSource.Play();
     }
     void DetenerAccion3()
     {
