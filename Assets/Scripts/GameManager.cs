@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public LifeController lifeController;
     private int difficulty;
     public AudioSource audioSource;
+   
 
 
     private static GameManager instance;
@@ -90,7 +91,8 @@ public class GameManager : MonoBehaviour
 
     public void BackMenu()
     {
-        SceneManager.LoadScene("Menu");
+        
+        SceneManager.LoadScene("MenuInical");
 
     }
 }
