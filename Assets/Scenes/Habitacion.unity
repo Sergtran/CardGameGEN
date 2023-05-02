@@ -1355,9 +1355,9 @@ RectTransform:
   m_Father: {fileID: 614296328}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -808, y: 534}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 152, y: -229}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &758901494
@@ -2154,10 +2154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbe7be548756504b95c62e29c7bf899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inicialLife: 5
-  currentLife: 0
-  lifeImage: {fileID: 0}
-  lifeSprites: []
+  initialLife: 5
+  currentLife: 5
+  lifeImage: {fileID: 758901494}
+  lifeSprites:
+  - {fileID: 21300000, guid: 3f80e43a36b623c48a2e3ebc4a97e53d, type: 3}
+  - {fileID: 21300000, guid: f67d9dbd7a7520b48aad476943e0cf5d, type: 3}
+  - {fileID: 21300000, guid: 9e6524b022f39c34aa3b5b78eb18f919, type: 3}
+  - {fileID: 21300000, guid: c514e67c57bd7b5458289e7000e79a8d, type: 3}
   audioSource: {fileID: 0}
 --- !u!4 &1122779067
 Transform:

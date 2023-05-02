@@ -15,7 +15,7 @@ public class LifeController : MonoBehaviour
     {
         currentLife = initialLife;
 
-        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > 0)
+        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > currentLife - 1)
         {
             lifeImage.sprite = lifeSprites[currentLife - 1];
         }
@@ -33,15 +33,16 @@ public class LifeController : MonoBehaviour
         {
             audioSource.Play();
         }
+        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > currentLife - 1)
+        {
+            lifeImage.sprite = lifeSprites[currentLife - 1];
+        }
 
         if (currentLife < 1)
         {
             GameManager.Instance.GameOver();
         }
 
-        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > 0)
-        {
-            lifeImage.sprite = lifeSprites[currentLife - 1];
-        }
+
     }
 }
