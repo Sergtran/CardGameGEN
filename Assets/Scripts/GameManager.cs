@@ -89,10 +89,10 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void BackMenu()
-    {
-        
-        SceneManager.LoadScene("Main Menu (Mobile)");
-
-    }
+    //public void BackMenu()
+    //{
+    //    
+    //    SceneManager.LoadScene("Main Menu (Mobile)");
+    //
+    //}
 }
