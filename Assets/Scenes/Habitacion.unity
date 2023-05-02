@@ -1645,10 +1645,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 500
-  minRotationX: 40
-  maxRotationX: 1
-  minRotationY: 40
-  maxRotationY: 40
+  minRotationX: 50
+  maxRotationX: 3
+  minRotationY: 80
+  maxRotationY: 80
 --- !u!1001 &1005363148
 PrefabInstance:
   m_ObjectHideFlags: 0
