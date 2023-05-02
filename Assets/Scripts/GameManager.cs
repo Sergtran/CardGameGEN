@@ -9,9 +9,10 @@ public class GameManager : MonoBehaviour
     public CrearCartas crearCartas;
     public EliminarCartas eliminarCartas;
     public LifeController lifeController;
+    public WinLoseMenuController winLoseMenuController;
     private int difficulty;
     public AudioSource audioSource;
-   
+       
 
 
     private static GameManager instance;
@@ -79,6 +80,7 @@ public class GameManager : MonoBehaviour
         audioSource.Stop();
         Debug.Log("you lose");
         eliminarCartas.gameObject.SetActive(false);
+        winLoseMenuController.lose();
     }
 
     public void YouWin()
@@ -86,7 +88,7 @@ public class GameManager : MonoBehaviour
         audioSource.Stop();
         Debug.Log("you win");
         eliminarCartas.gameObject.SetActive(false);
-
+        winLoseMenuController.win();
     }
 
     public void BackMenu()
@@ -94,5 +96,10 @@ public class GameManager : MonoBehaviour
         
         SceneManager.LoadScene("Main Menu (Mobile) 1");
 
+    } 
+    public void ResetLevel()
+    {        
+        SceneManager.LoadScene("Habitacion");
+        winLoseMenuController.ResetLevel();
     }
 }
