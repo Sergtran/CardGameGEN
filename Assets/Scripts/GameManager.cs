@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
     public void BackMenu()
     {
         
-        SceneManager.LoadScene("Main Menu (Mobile)");
+        SceneManager.LoadScene("Main Menu (Mobile) 1");
 
     }
 }
