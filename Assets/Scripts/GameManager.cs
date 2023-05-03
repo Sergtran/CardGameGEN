@@ -91,14 +91,21 @@ public class GameManager : MonoBehaviour
         winLoseMenuController.win();
     }
 
+    //public void BackMenu()
+    //{
+    //    
+    //    SceneManager.LoadScene("Main Menu (Mobile)");
+    //
+    //}
+
     public void BackMenu()
     {
-        
+
         SceneManager.LoadScene("Main Menu (Mobile) 1");
 
-    } 
+    }
     public void ResetLevel()
-    {        
+    {
         SceneManager.LoadScene("Habitacion");
         winLoseMenuController.ResetLevel();
     }
