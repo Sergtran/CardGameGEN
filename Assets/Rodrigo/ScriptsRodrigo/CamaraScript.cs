@@ -10,10 +10,10 @@ public class CamaraScript : MonoBehaviour
     private float minYAngle;
     private float maxYAngle;
 
-    [SerializeField, Range(0,50)] private float minRotationX; // 20
-    [SerializeField, Range(0,3)] private float maxRotationX; // 10
-    [SerializeField, Range(0,80)] private float minRotationY; // 20
-    [SerializeField, Range(0,80)] private float maxRotationY; // 20
+    [SerializeField, Range(0, 50)] private float minRotationX; // 20
+    [SerializeField, Range(0, 3)] private float maxRotationX; // 10
+    [SerializeField, Range(0, 80)] private float minRotationY; // 20
+    [SerializeField, Range(0, 80)] private float maxRotationY; // 20
 
 
     void Start()
@@ -44,3 +44,4 @@ public class CamaraScript : MonoBehaviour
         }
     }
 }
+
