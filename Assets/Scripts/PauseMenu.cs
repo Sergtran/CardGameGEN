@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Se cierra el juego");
         audioSource.Stop();
-        SceneManager.LoadScene("Main Menu (Mobile)");
+        SceneManager.LoadScene("Main Menu (Mobile) 1");
         //Application.Quit();
     }
 }

@@ -17,6 +17,7 @@ public class WinLoseMenuController : MonoBehaviour
         menuButton.gameObject.SetActive(false);
         winImage.gameObject.SetActive(false);
         loseImage.gameObject.SetActive(false);
+
     }
 
     public void win()
