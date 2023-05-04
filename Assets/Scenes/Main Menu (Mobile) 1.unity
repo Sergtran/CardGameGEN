@@ -176,7 +176,7 @@ MonoBehaviour:
   splashScreen: {fileID: 1103573354}
   mainPanels: {fileID: 72071061}
   homePanel: {fileID: 114261263}
-  disableSplashScreen: 0
+  disableSplashScreen: 1
 --- !u!114 &6280672
 MonoBehaviour:
   m_ObjectHideFlags: 0
