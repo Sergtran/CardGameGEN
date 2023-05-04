@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public EliminarCartas eliminarCartas;
     public LifeController lifeController;
     public WinLoseMenuController winLoseMenuController;
+    //public PauseMenu pauseMenu;
     private int difficulty;
     public AudioSource audioSource;
        
@@ -102,6 +103,7 @@ public class GameManager : MonoBehaviour
     {
 
         SceneManager.LoadScene("Main Menu (Mobile) 1");
+        //pauseMenu.Quit();
 
     }
     public void ResetLevel()
