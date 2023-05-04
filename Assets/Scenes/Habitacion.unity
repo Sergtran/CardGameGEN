@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589169, b: 0.29782546, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2161,10 +2161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 500
-  minRotationX: 20
+  minRotationX: 50
   maxRotationX: 3
-  minRotationY: 20
-  maxRotationY: 20
+  minRotationY: 80
+  maxRotationY: 80
 --- !u!1001 &1005363148
 PrefabInstance:
   m_ObjectHideFlags: 0
