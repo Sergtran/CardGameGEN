@@ -41,7 +41,7 @@ public class EliminarCartas : MonoBehaviour
             else if (currentSelection[1] == null)
             {
                 // Segunda carta seleccionada
-                if(selectedCard.estaDestapada == false){
+                if(selectedCard != null && selectedCard.estaDestapada == false){
 
                
                 currentSelection[1] = selectedCard;

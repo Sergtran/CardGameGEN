@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276807, g: 0.21589197, b: 0.29782572, a: 1}
+  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589169, b: 0.29782546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5582,8 +5582,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
-  m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
+  m_sharedMaterial: {fileID: -7436581490687599599, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5607,13 +5607,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5671,8 +5671,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'RESET '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
-  m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
+  m_sharedMaterial: {fileID: -7436581490687599599, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5696,13 +5696,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5840,8 +5840,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'RESET '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
-  m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
+  m_sharedMaterial: {fileID: -7436581490687599599, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5865,13 +5865,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -5929,8 +5929,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
-  m_sharedMaterial: {fileID: 21513131424051102, guid: 1303a6dde387e694f8da16b62d2cf437, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
+  m_sharedMaterial: {fileID: -7436581490687599599, guid: e0385ea51d6951d4f8dbb228c509f7b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5954,13 +5954,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7255,7 +7255,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -339, y: 0}
-  m_SizeDelta: {x: 84.78, y: 50}
+  m_SizeDelta: {x: 128.21, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9131070433433520243
 RectTransform:
@@ -7278,7 +7278,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 339, y: 0}
-  m_SizeDelta: {x: 96.98, y: 50}
+  m_SizeDelta: {x: 120.81, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9131071965649753907
 RectTransform:
@@ -7337,8 +7337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.49, y: -20.005}
-  m_SizeDelta: {x: 96.98, y: 40.01}
+  m_AnchoredPosition: {x: 60.405, y: -20.005}
+  m_SizeDelta: {x: 120.81, y: 40.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9131303702701305448
 RectTransform:
@@ -7357,8 +7357,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.39, y: -20.005}
-  m_SizeDelta: {x: 84.78, y: 40.01}
+  m_AnchoredPosition: {x: 64.105, y: -20.005}
+  m_SizeDelta: {x: 128.21, y: 40.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9131519362610214047
 RectTransform:
@@ -7378,8 +7378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.49, y: -25}
-  m_SizeDelta: {x: 96.98, y: 40.01}
+  m_AnchoredPosition: {x: 60.405, y: -25}
+  m_SizeDelta: {x: 120.81, y: 40.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9131519363600382668
 RectTransform:
@@ -7399,8 +7399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.39, y: -25}
-  m_SizeDelta: {x: 84.78, y: 40.01}
+  m_AnchoredPosition: {x: 64.105, y: -25}
+  m_SizeDelta: {x: 128.21, y: 40.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9131619198518623676
 RectTransform:
