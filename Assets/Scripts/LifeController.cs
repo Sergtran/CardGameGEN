@@ -8,7 +8,7 @@ public class LifeController : MonoBehaviour
     public int initialLife = 5;
     public int currentLife;
     public Image lifeImage;
-    public Sprite[] lifeSprites;
+    public Sprite[] lifeSprites ;
     public AudioSource audioSource;
 
     private void Start()
@@ -33,15 +33,20 @@ public class LifeController : MonoBehaviour
         {
             audioSource.Play();
         }
-        if (lifeImage != null && lifeSprites != null && lifeSprites.Length > currentLife - 1)
+        if (lifeImage != null && lifeSprites != null && currentLife > 0 && lifeSprites.Length > currentLife - 1)
         {
             lifeImage.sprite = lifeSprites[currentLife - 1];
         }
 
         if (currentLife < 1)
         {
+            gameObject.SetActive(false);
+
             GameManager.Instance.GameOver();
         }
+        
+
+
 
 
     }

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public EliminarCartas eliminarCartas;
     public LifeController lifeController;
     public WinLoseMenuController winLoseMenuController;
+    //public PauseMenu pauseMenu;
     private int difficulty;
     public AudioSource audioSource;
        
@@ -91,14 +92,22 @@ public class GameManager : MonoBehaviour
         winLoseMenuController.win();
     }
 
+    //public void BackMenu()
+    //{
+    //    
+    //    SceneManager.LoadScene("Main Menu (Mobile)");
+    //
+    //}
+
     public void BackMenu()
     {
-        
-        SceneManager.LoadScene("Main Menu (Mobile) 1");
 
-    } 
+        SceneManager.LoadScene("Main Menu (Mobile) 1");
+        //pauseMenu.Quit();
+
+    }
     public void ResetLevel()
-    {        
+    {
         SceneManager.LoadScene("Habitacion");
         winLoseMenuController.ResetLevel();
     }
